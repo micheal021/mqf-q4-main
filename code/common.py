@@ -109,10 +109,28 @@ def future_split(history: nx.Graph, target: nx.Graph, rng: np.random.Generator) 
     return {"positive": positives, "negative": negatives}
 
 
+def future_directed_split(history: nx.DiGraph, target: nx.DiGraph, rng: np.random.Generator) -> dict[str, list[tuple[int, int]]]:
+    """Chronological directed trade-edge labels for a target year."""
+    history_edges = {(int(left), int(right)) for left, right in history.edges}
+    target_edges = {(int(left), int(right)) for left, right in target.edges}
+    positives = sorted(target_edges - history_edges)
+    all_directed = {(left, right) for left in history.nodes for right in history.nodes if left != right}
+    negatives = sorted(all_directed - history_edges - target_edges)
+    negatives = sample_equal(negatives, len(positives), rng)
+    rng.shuffle(positives); rng.shuffle(negatives)
+    return {"positive": positives, "negative": negatives}
+
+
 def reconstruction_split(history: nx.Graph, rng: np.random.Generator) -> dict[str, list[tuple[int, int]]]:
     """Training labels use only the observed history graph, never a future graph."""
     positives = edge_pairs(history)
-    negatives = sample_equal(sorted(set(all_pairs(history.nodes)) - set(positives)), len(positives), rng)
+    negative_candidates = sorted(set(all_pairs(history.nodes)) - set(positives))
+    # Historical union graphs can be denser than one annual graph.  Keep the
+    # training labels balanced by subsampling observed positives when needed;
+    # the future validation/test labels remain equal by construction.
+    count = min(len(positives), len(negative_candidates))
+    positives = [positives[int(index)] for index in rng.choice(len(positives), size=count, replace=False)]
+    negatives = sample_equal(negative_candidates, count, rng)
     rng.shuffle(positives); rng.shuffle(negatives)
     cut1 = max(1, int(0.8 * len(positives))); cut2 = max(cut1 + 1, int(0.9 * len(positives)))
     return {"train_positive": positives[:cut1], "train_negative": negatives[:cut1], "holdout_positive": positives[cut1:cut2], "holdout_negative": negatives[cut1:cut2]}
