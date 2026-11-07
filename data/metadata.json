@@ -22,11 +22,27 @@
   "artifacts": {
     "data/clean/trade_flows.csv": {
       "sha256": "3f89cf39a5fcef53c5fffaaee016e70ff47f1ac29ea177a99792b1cee6f3e420",
-      "bytes": 250403
+      "bytes": 250403,
+      "rows": 4160,
+      "columns": [
+        "year",
+        "reporter_code",
+        "partner_code",
+        "trade_value_usd",
+        "flow",
+        "source"
+      ]
     },
     "data/clean/node_metadata.csv": {
       "sha256": "b2a7a3aca589ef8f2c9cc85667ac66734d55711be85ac92b8cd6a2e044a96e13",
-      "bytes": 609
+      "bytes": 609,
+      "rows": 21,
+      "columns": [
+        "node_code",
+        "node_name",
+        "region",
+        "is_china"
+      ]
     }
   }
 }

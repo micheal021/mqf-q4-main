@@ -187,6 +187,12 @@ def verify_snapshot() -> dict:
         actual = sha256(path)
         if actual != info["sha256"]:
             raise ValueError(f"checksum mismatch for {relative}: {actual} != {info['sha256']}")
+        with path.open(newline="", encoding="utf-8") as handle:
+            table = list(csv.DictReader(handle))
+        if len(table) != info["rows"]:
+            raise ValueError(f"row-count mismatch for {relative}: {len(table)} != {info['rows']}")
+        if list(table[0]) != info["columns"]:
+            raise ValueError(f"schema mismatch for {relative}")
     with (CLEAN / "trade_flows.csv").open(newline="", encoding="utf-8") as handle:
         rows = list(csv.DictReader(handle))
     with (CLEAN / "node_metadata.csv").open(newline="", encoding="utf-8") as handle:
@@ -230,7 +236,9 @@ def main() -> None:
         "artifacts": {},
     }
     for path in (flow_path, node_path):
-        metadata["artifacts"][str(path.relative_to(ROOT))] = {"sha256": sha256(path), "bytes": path.stat().st_size}
+        with path.open(newline="", encoding="utf-8") as handle:
+            table = list(csv.DictReader(handle))
+        metadata["artifacts"][str(path.relative_to(ROOT))] = {"sha256": sha256(path), "bytes": path.stat().st_size, "rows": len(table), "columns": list(table[0])}
     metadata_path.write_text(json.dumps(metadata, ensure_ascii=False, indent=2))
     print(json.dumps({"years": years, "nodes": len(nodes), "rows": len(rows), "metadata": str(metadata_path)}, indent=2))
 
