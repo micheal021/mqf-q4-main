@@ -1,0 +1,22 @@
+node_code,node_name,region,is_china
+156,China,East Asia,1
+842,United States,North America,0
+392,Japan,East Asia,0
+410,South Korea,East Asia,0
+344,Hong Kong,East Asia,0
+490,Partner 490,Other,0
+643,Russia,Europe,0
+704,Vietnam,East Asia,0
+36,Australia,Oceania,0
+276,Germany,Europe,0
+458,Malaysia,Southeast Asia,0
+76,Brazil,South America,0
+360,Indonesia,Southeast Asia,0
+699,Partner 699,Other,0
+764,Thailand,Southeast Asia,0
+528,Netherlands,Europe,0
+702,Singapore,Southeast Asia,0
+682,Saudi Arabia,Middle East,0
+484,Mexico,North America,0
+826,United Kingdom,Europe,0
+784,Partner 784,Other,0

@@ -1,0 +1,32 @@
+{
+  "source": "https://comtradeapi.un.org/public/v1/preview/C/A/HS",
+  "retrieved_at_utc": "2026-11-05T00:00:00Z",
+  "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+  ],
+  "top_partners": 20,
+  "anchor_year": 2023,
+  "flow_definition": "Annual reported exports among China and anchor-year top trade partners; primaryValue in USD.",
+  "node_count": 21,
+  "edge_rows": 4160,
+  "offline_default": true,
+  "artifacts": {
+    "data/clean/trade_flows.csv": {
+      "sha256": "3f89cf39a5fcef53c5fffaaee016e70ff47f1ac29ea177a99792b1cee6f3e420",
+      "bytes": 250403
+    },
+    "data/clean/node_metadata.csv": {
+      "sha256": "b2a7a3aca589ef8f2c9cc85667ac66734d55711be85ac92b8cd6a2e044a96e13",
+      "bytes": 609
+    }
+  }
+}
