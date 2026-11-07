@@ -1,0 +1,2257 @@
+{
+  "params": {
+    "seed": 42,
+    "top_k": 10,
+    "dimensions": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "p_values": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "q_values": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "epochs": 5
+  },
+  "metrics": {
+    "task": {
+      "type": "future_directed_trade_edge_formation",
+      "validation_target_year": 2022,
+      "test_target_year": 2023,
+      "candidate_negatives": "ordered pairs absent from history and target; equal to positives"
+    },
+    "chronology": {
+      "validation_history_year": 2021,
+      "test_history_year": 2022,
+      "test_is_untouched": true
+    },
+    "split_manifest": {
+      "validation": {
+        "positive": [
+          [
+            410,
+            36
+          ],
+          [
+            344,
+            784
+          ],
+          [
+            156,
+            458
+          ],
+          [
+            392,
+            36
+          ],
+          [
+            682,
+            276
+          ],
+          [
+            682,
+            36
+          ],
+          [
+            528,
+            484
+          ],
+          [
+            36,
+            458
+          ],
+          [
+            528,
+            76
+          ],
+          [
+            36,
+            528
+          ],
+          [
+            842,
+            702
+          ],
+          [
+            784,
+            643
+          ],
+          [
+            484,
+            702
+          ],
+          [
+            458,
+            410
+          ]
+        ],
+        "negative": [
+          [
+            764,
+            784
+          ],
+          [
+            764,
+            528
+          ],
+          [
+            76,
+            344
+          ],
+          [
+            484,
+            344
+          ],
+          [
+            826,
+            484
+          ],
+          [
+            410,
+            528
+          ],
+          [
+            702,
+            699
+          ],
+          [
+            643,
+            764
+          ],
+          [
+            156,
+            360
+          ],
+          [
+            643,
+            702
+          ],
+          [
+            458,
+            643
+          ],
+          [
+            458,
+            76
+          ],
+          [
+            490,
+            784
+          ],
+          [
+            682,
+            704
+          ]
+        ]
+      },
+      "test": {
+        "positive": [
+          [
+            528,
+            784
+          ],
+          [
+            682,
+            826
+          ],
+          [
+            36,
+            702
+          ],
+          [
+            528,
+            682
+          ],
+          [
+            344,
+            764
+          ],
+          [
+            490,
+            764
+          ],
+          [
+            699,
+            36
+          ],
+          [
+            76,
+            360
+          ],
+          [
+            682,
+            764
+          ],
+          [
+            484,
+            36
+          ],
+          [
+            276,
+            36
+          ],
+          [
+            36,
+            344
+          ],
+          [
+            458,
+            36
+          ],
+          [
+            156,
+            643
+          ]
+        ],
+        "negative": [
+          [
+            276,
+            702
+          ],
+          [
+            392,
+            458
+          ],
+          [
+            699,
+            764
+          ],
+          [
+            490,
+            699
+          ],
+          [
+            643,
+            682
+          ],
+          [
+            528,
+            764
+          ],
+          [
+            643,
+            410
+          ],
+          [
+            76,
+            826
+          ],
+          [
+            458,
+            528
+          ],
+          [
+            842,
+            36
+          ],
+          [
+            699,
+            643
+          ],
+          [
+            490,
+            484
+          ],
+          [
+            410,
+            360
+          ],
+          [
+            360,
+            784
+          ]
+        ]
+      }
+    },
+    "selected_configuration": {
+      "p": 0.5,
+      "q": 1.0,
+      "dimension": 16,
+      "selection_rule": "maximum validation AUC, AP as tie-break; test metrics not inspected"
+    },
+    "validation_sweep": {
+      "p=0.5,q=0.5,d=8": {
+        "validation": {
+          "auc": 0.7551020408163265,
+          "average_precision": 0.737993970315399,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 0.5,
+          "q": 0.5,
+          "dimension": 8,
+          "skipgram_loss": [
+            1.2587127876281738,
+            1.1619976139068604,
+            1.1476127862930299,
+            1.1464079380035401,
+            1.1448289489746093
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.6986023783683777,
+            "final_loss": 0.22021158039569855,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=0.5,q=0.5,d=16": {
+        "validation": {
+          "auc": 0.7551020408163266,
+          "average_precision": 0.7755278232627856,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 0.5,
+          "q": 0.5,
+          "dimension": 16,
+          "skipgram_loss": [
+            1.2180149841308594,
+            1.139318151473999,
+            1.131588020324707,
+            1.1245476722717285,
+            1.1257480096817016
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.7371224164962769,
+            "final_loss": 0.016982894390821457,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=0.5,q=0.5,d=32": {
+        "validation": {
+          "auc": 0.6581632653061225,
+          "average_precision": 0.6750743590283617,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 0.5,
+          "q": 0.5,
+          "dimension": 32,
+          "skipgram_loss": [
+            1.2042438459396363,
+            1.1399712657928467,
+            1.1378818464279175,
+            1.1293581867218017,
+            1.129065718650818
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.7360460758209229,
+            "final_loss": 0.002671618480235338,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=0.5,q=0.5,d=64": {
+        "validation": {
+          "auc": 0.6275510204081634,
+          "average_precision": 0.5721230732508928,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 0.5,
+          "q": 0.5,
+          "dimension": 64,
+          "skipgram_loss": [
+            1.2065702724456786,
+            1.1495061254501342,
+            1.147486562728882,
+            1.1415961742401124,
+            1.1460509586334229
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.6641502380371094,
+            "final_loss": 0.0008743906510062516,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=0.5,q=1,d=8": {
+        "validation": {
+          "auc": 0.653061224489796,
+          "average_precision": 0.6602781755977245,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 0.5,
+          "q": 1.0,
+          "dimension": 8,
+          "skipgram_loss": [
+            1.251510396003723,
+            1.1483502721786498,
+            1.1291603660583496,
+            1.1234670066833496,
+            1.123677339553833
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.6989610195159912,
+            "final_loss": 0.1613560914993286,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=0.5,q=1,d=16": {
+        "validation": {
+          "auc": 0.8061224489795918,
+          "average_precision": 0.8076073926073926,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 0.5,
+          "q": 1.0,
+          "dimension": 16,
+          "skipgram_loss": [
+            1.2120985221862792,
+            1.1243217706680297,
+            1.1177997016906738,
+            1.1128745317459106,
+            1.1120670080184936
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.6909377574920654,
+            "final_loss": 0.015605821274220943,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=0.5,q=1,d=32": {
+        "validation": {
+          "auc": 0.7346938775510203,
+          "average_precision": 0.7664577719199568,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 0.5,
+          "q": 1.0,
+          "dimension": 32,
+          "skipgram_loss": [
+            1.1974566030502318,
+            1.1206324100494385,
+            1.1125610446929932,
+            1.1096245288848876,
+            1.1124663543701172
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.7123461365699768,
+            "final_loss": 0.0016265041194856167,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=0.5,q=1,d=64": {
+        "validation": {
+          "auc": 0.6581632653061223,
+          "average_precision": 0.6435067577924721,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 0.5,
+          "q": 1.0,
+          "dimension": 64,
+          "skipgram_loss": [
+            1.1711511135101318,
+            1.118089017868042,
+            1.1188514232635498,
+            1.1190627384185792,
+            1.1099818134307862
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.6357654333114624,
+            "final_loss": 0.0007959870854392648,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=0.5,q=2,d=8": {
+        "validation": {
+          "auc": 0.6122448979591837,
+          "average_precision": 0.6487702773417059,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 0.5,
+          "q": 2.0,
+          "dimension": 8,
+          "skipgram_loss": [
+            1.2298761320114135,
+            1.0997530651092529,
+            1.0855936765670777,
+            1.074998025894165,
+            1.074455165863037
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.6683313250541687,
+            "final_loss": 0.1617518663406372,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=0.5,q=2,d=16": {
+        "validation": {
+          "auc": 0.7806122448979591,
+          "average_precision": 0.7626592782648682,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 0.5,
+          "q": 2.0,
+          "dimension": 16,
+          "skipgram_loss": [
+            1.2003492307662964,
+            1.10675217628479,
+            1.0967005491256714,
+            1.0931556367874145,
+            1.092502884864807
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.7465981841087341,
+            "final_loss": 0.014780313707888126,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=0.5,q=2,d=32": {
+        "validation": {
+          "auc": 0.7653061224489797,
+          "average_precision": 0.7964695834167307,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 0.5,
+          "q": 2.0,
+          "dimension": 32,
+          "skipgram_loss": [
+            1.17596453666687,
+            1.0981686687469483,
+            1.0882284498214723,
+            1.0926115226745605,
+            1.0884713649749755
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.7512275576591492,
+            "final_loss": 0.0016042512143030763,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=0.5,q=2,d=64": {
+        "validation": {
+          "auc": 0.7857142857142857,
+          "average_precision": 0.7236585052374526,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 0.5,
+          "q": 2.0,
+          "dimension": 64,
+          "skipgram_loss": [
+            1.1527030324935914,
+            1.0863402891159057,
+            1.0829356479644776,
+            1.0769887685775756,
+            1.0773322105407714
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.7209715843200684,
+            "final_loss": 0.0010224360739812255,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=1,q=0.5,d=8": {
+        "validation": {
+          "auc": 0.7448979591836734,
+          "average_precision": 0.732790688147831,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 1.0,
+          "q": 0.5,
+          "dimension": 8,
+          "skipgram_loss": [
+            1.2740555572509766,
+            1.1890060234069824,
+            1.172942419052124,
+            1.1697639322280884,
+            1.1715188598632813
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.7015457153320312,
+            "final_loss": 0.24382203817367554,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=1,q=0.5,d=16": {
+        "validation": {
+          "auc": 0.6122448979591837,
+          "average_precision": 0.6657563508495185,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 1.0,
+          "q": 0.5,
+          "dimension": 16,
+          "skipgram_loss": [
+            1.2479574918746947,
+            1.172899179458618,
+            1.1637451124191285,
+            1.1652143383026123,
+            1.160621290206909
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.741864800453186,
+            "final_loss": 0.013700690120458603,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=1,q=0.5,d=32": {
+        "validation": {
+          "auc": 0.6785714285714286,
+          "average_precision": 0.681536303585993,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 1.0,
+          "q": 0.5,
+          "dimension": 32,
+          "skipgram_loss": [
+            1.2232307767868043,
+            1.1611004781723022,
+            1.1536024856567382,
+            1.1544633102416992,
+            1.1518115949630738
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.7538588643074036,
+            "final_loss": 0.002650752430781722,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=1,q=0.5,d=64": {
+        "validation": {
+          "auc": 0.7295918367346939,
+          "average_precision": 0.7089363690140089,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 1.0,
+          "q": 0.5,
+          "dimension": 64,
+          "skipgram_loss": [
+            1.225615611076355,
+            1.1738132619857788,
+            1.1692866849899293,
+            1.1741344547271728,
+            1.1665758514404296
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.7431582808494568,
+            "final_loss": 0.0005730697303079069,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=1,q=1,d=8": {
+        "validation": {
+          "auc": 0.5765306122448981,
+          "average_precision": 0.6734949052084601,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 1.0,
+          "q": 1.0,
+          "dimension": 8,
+          "skipgram_loss": [
+            1.263414978981018,
+            1.161819143295288,
+            1.150635714530945,
+            1.1455015087127685,
+            1.141331720352173
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.7093338966369629,
+            "final_loss": 0.12830528616905212,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=1,q=1,d=16": {
+        "validation": {
+          "auc": 0.7142857142857143,
+          "average_precision": 0.6890227278495744,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 1.0,
+          "q": 1.0,
+          "dimension": 16,
+          "skipgram_loss": [
+            1.2307457733154297,
+            1.1573869132995604,
+            1.1487969732284546,
+            1.1455442094802857,
+            1.1441543340682983
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.825238049030304,
+            "final_loss": 0.011551677249372005,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=1,q=1,d=32": {
+        "validation": {
+          "auc": 0.7602040816326531,
+          "average_precision": 0.6649103089892563,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 1.0,
+          "q": 1.0,
+          "dimension": 32,
+          "skipgram_loss": [
+            1.223461332321167,
+            1.1532381248474122,
+            1.1483350896835327,
+            1.145071177482605,
+            1.1403759288787843
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.7526875138282776,
+            "final_loss": 0.0016630530590191483,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=1,q=1,d=64": {
+        "validation": {
+          "auc": 0.7091836734693877,
+          "average_precision": 0.6938292100056807,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 1.0,
+          "q": 1.0,
+          "dimension": 64,
+          "skipgram_loss": [
+            1.1968189096450805,
+            1.138003764152527,
+            1.1369809532165527,
+            1.1336251735687255,
+            1.1278082609176636
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.884650468826294,
+            "final_loss": 0.0008972522336989641,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=1,q=2,d=8": {
+        "validation": {
+          "auc": 0.7755102040816326,
+          "average_precision": 0.8211931499995409,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 1.0,
+          "q": 2.0,
+          "dimension": 8,
+          "skipgram_loss": [
+            1.2569679641723632,
+            1.1600050258636474,
+            1.146502923965454,
+            1.1369632148742677,
+            1.1343075323104859
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.8334010243415833,
+            "final_loss": 0.15264825522899628,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=1,q=2,d=16": {
+        "validation": {
+          "auc": 0.739795918367347,
+          "average_precision": 0.7656934051618012,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 1.0,
+          "q": 2.0,
+          "dimension": 16,
+          "skipgram_loss": [
+            1.23229953289032,
+            1.1516754627227783,
+            1.1436357116699218,
+            1.1352146291732788,
+            1.1333973598480225
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.793074369430542,
+            "final_loss": 0.00899577047675848,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=1,q=2,d=32": {
+        "validation": {
+          "auc": 0.653061224489796,
+          "average_precision": 0.5834587471352177,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 1.0,
+          "q": 2.0,
+          "dimension": 32,
+          "skipgram_loss": [
+            1.2089533662796021,
+            1.134269905090332,
+            1.1227658891677856,
+            1.1167363262176513,
+            1.1175329637527467
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.8707983493804932,
+            "final_loss": 0.0015804149443283677,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=1,q=2,d=64": {
+        "validation": {
+          "auc": 0.7142857142857143,
+          "average_precision": 0.6655283442048149,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 1.0,
+          "q": 2.0,
+          "dimension": 64,
+          "skipgram_loss": [
+            1.192407112121582,
+            1.1331553077697754,
+            1.1312941217422485,
+            1.128554000854492,
+            1.1258851623535155
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.9094244241714478,
+            "final_loss": 0.0004854050639551133,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=2,q=0.5,d=8": {
+        "validation": {
+          "auc": 0.6836734693877551,
+          "average_precision": 0.6889433986323829,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 2.0,
+          "q": 0.5,
+          "dimension": 8,
+          "skipgram_loss": [
+            1.2736533403396606,
+            1.2020097017288207,
+            1.193332209587097,
+            1.186228132247925,
+            1.1817469930648803
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.7689544558525085,
+            "final_loss": 0.1696445494890213,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=2,q=0.5,d=16": {
+        "validation": {
+          "auc": 0.6428571428571428,
+          "average_precision": 0.6293569586545472,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 2.0,
+          "q": 0.5,
+          "dimension": 16,
+          "skipgram_loss": [
+            1.2571401596069336,
+            1.19103937625885,
+            1.1802519655227661,
+            1.1773206663131714,
+            1.1791762828826904
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.8048563599586487,
+            "final_loss": 0.00814410112798214,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=2,q=0.5,d=32": {
+        "validation": {
+          "auc": 0.7193877551020408,
+          "average_precision": 0.7071024738566756,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 2.0,
+          "q": 0.5,
+          "dimension": 32,
+          "skipgram_loss": [
+            1.2489683246612548,
+            1.195553789138794,
+            1.1900872468948365,
+            1.1847164249420166,
+            1.1890880107879638
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.7316981554031372,
+            "final_loss": 0.0018283822573721409,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=2,q=0.5,d=64": {
+        "validation": {
+          "auc": 0.673469387755102,
+          "average_precision": 0.6809677623963337,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 2.0,
+          "q": 0.5,
+          "dimension": 64,
+          "skipgram_loss": [
+            1.2319495916366576,
+            1.1840791606903076,
+            1.183903021812439,
+            1.1803672456741332,
+            1.1800475215911865
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.7309120893478394,
+            "final_loss": 0.0005714070284739137,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=2,q=1,d=8": {
+        "validation": {
+          "auc": 0.6326530612244898,
+          "average_precision": 0.5715509271430324,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 2.0,
+          "q": 1.0,
+          "dimension": 8,
+          "skipgram_loss": [
+            1.2684779405593871,
+            1.1864488983154298,
+            1.1683726072311402,
+            1.163206810951233,
+            1.1624998617172242
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.7454311847686768,
+            "final_loss": 0.06420625001192093,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=2,q=1,d=16": {
+        "validation": {
+          "auc": 0.7551020408163266,
+          "average_precision": 0.6736192121309327,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 2.0,
+          "q": 1.0,
+          "dimension": 16,
+          "skipgram_loss": [
+            1.2384795665740966,
+            1.164608702659607,
+            1.1500018405914307,
+            1.1530554103851318,
+            1.151560115814209
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.8171672224998474,
+            "final_loss": 0.004496301990002394,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=2,q=1,d=32": {
+        "validation": {
+          "auc": 0.7142857142857143,
+          "average_precision": 0.704779093455564,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 2.0,
+          "q": 1.0,
+          "dimension": 32,
+          "skipgram_loss": [
+            1.2352270889282226,
+            1.1704909229278564,
+            1.1637867546081544,
+            1.163603844642639,
+            1.1598449659347534
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.8630638718605042,
+            "final_loss": 0.0015268637798726559,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=2,q=1,d=64": {
+        "validation": {
+          "auc": 0.6377551020408163,
+          "average_precision": 0.6754788344850455,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 2.0,
+          "q": 1.0,
+          "dimension": 64,
+          "skipgram_loss": [
+            1.2126682567596436,
+            1.1602362823486327,
+            1.157525339126587,
+            1.1569330167770386,
+            1.1549077701568604
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.8456720113754272,
+            "final_loss": 0.0007287976914085448,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=2,q=2,d=8": {
+        "validation": {
+          "auc": 0.46938775510204084,
+          "average_precision": 0.5021146636418833,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 2.0,
+          "q": 2.0,
+          "dimension": 8,
+          "skipgram_loss": [
+            1.2626895523071289,
+            1.1743209505081176,
+            1.1574141836166383,
+            1.147456283569336,
+            1.1441693162918092
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.896136462688446,
+            "final_loss": 0.13267728686332703,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=2,q=2,d=16": {
+        "validation": {
+          "auc": 0.7193877551020408,
+          "average_precision": 0.7316391948996077,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 2.0,
+          "q": 2.0,
+          "dimension": 16,
+          "skipgram_loss": [
+            1.2372796630859375,
+            1.1494291162490844,
+            1.13497709274292,
+            1.1260449552536012,
+            1.1334558010101319
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.9563562273979187,
+            "final_loss": 0.006555415224283934,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=2,q=2,d=32": {
+        "validation": {
+          "auc": 0.7551020408163266,
+          "average_precision": 0.7111668431728091,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 2.0,
+          "q": 2.0,
+          "dimension": 32,
+          "skipgram_loss": [
+            1.2091831588745117,
+            1.1379386711120605,
+            1.127328667640686,
+            1.127873077392578,
+            1.1232913827896118
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.8352950215339661,
+            "final_loss": 0.001413706224411726,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      },
+      "p=2,q=2,d=64": {
+        "validation": {
+          "auc": 0.7857142857142857,
+          "average_precision": 0.7398059650188133,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "baselines": {
+          "common_neighbors": {
+            "auc": 0.6862244897959184,
+            "average_precision": 0.6676538026162085,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "adamic_adar": {
+            "auc": 0.6785714285714286,
+            "average_precision": 0.6685499918693195,
+            "positive_count": 14,
+            "negative_count": 14
+          },
+          "preferential_attachment": {
+            "auc": 0.6428571428571429,
+            "average_precision": 0.6449172917030059,
+            "positive_count": 14,
+            "negative_count": 14
+          }
+        },
+        "training": {
+          "walk_contexts": 12432,
+          "p": 2.0,
+          "q": 2.0,
+          "dimension": 64,
+          "skipgram_loss": [
+            1.200505061149597,
+            1.1434340906143188,
+            1.1444866609573365,
+            1.1456558179855347,
+            1.1435071897506714
+          ],
+          "bilinear": {
+            "epochs": 160,
+            "initial_loss": 0.8653587102890015,
+            "final_loss": 0.0002791451697703451,
+            "training_positive": 50,
+            "training_negative": 50
+          }
+        }
+      }
+    },
+    "test": {
+      "learned": {
+        "auc": 0.5918367346938775,
+        "average_precision": 0.6143266067110604,
+        "positive_count": 14,
+        "negative_count": 14
+      },
+      "baselines": {
+        "common_neighbors": {
+          "auc": 0.4693877551020408,
+          "average_precision": 0.46895831911359864,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "adamic_adar": {
+          "auc": 0.4872448979591837,
+          "average_precision": 0.47742288716439246,
+          "positive_count": 14,
+          "negative_count": 14
+        },
+        "preferential_attachment": {
+          "auc": 0.40816326530612246,
+          "average_precision": 0.4508123392897829,
+          "positive_count": 14,
+          "negative_count": 14
+        }
+      },
+      "future_split": {
+        "positive": [
+          [
+            528,
+            784
+          ],
+          [
+            682,
+            826
+          ],
+          [
+            36,
+            702
+          ],
+          [
+            528,
+            682
+          ],
+          [
+            344,
+            764
+          ],
+          [
+            490,
+            764
+          ],
+          [
+            699,
+            36
+          ],
+          [
+            76,
+            360
+          ],
+          [
+            682,
+            764
+          ],
+          [
+            484,
+            36
+          ],
+          [
+            276,
+            36
+          ],
+          [
+            36,
+            344
+          ],
+          [
+            458,
+            36
+          ],
+          [
+            156,
+            643
+          ]
+        ],
+        "negative": [
+          [
+            276,
+            702
+          ],
+          [
+            392,
+            458
+          ],
+          [
+            699,
+            764
+          ],
+          [
+            490,
+            699
+          ],
+          [
+            643,
+            682
+          ],
+          [
+            528,
+            764
+          ],
+          [
+            643,
+            410
+          ],
+          [
+            76,
+            826
+          ],
+          [
+            458,
+            528
+          ],
+          [
+            842,
+            36
+          ],
+          [
+            699,
+            643
+          ],
+          [
+            490,
+            484
+          ],
+          [
+            410,
+            360
+          ],
+          [
+            360,
+            784
+          ]
+        ]
+      },
+      "training_graph": {
+        "history_end": 2022,
+        "nodes": 21,
+        "undirected_edges": 138,
+        "directed_edges": 200
+      },
+      "training": {
+        "walk_contexts": 12432,
+        "p": 0.5,
+        "q": 1.0,
+        "dimension": 16,
+        "skipgram_loss": [
+          1.207060546875,
+          1.1109922790527345,
+          1.1001364040374755,
+          1.0968112659454345,
+          1.0945103073120117
+        ],
+        "bilinear": {
+          "epochs": 160,
+          "initial_loss": 0.7461479306221008,
+          "final_loss": 0.020707612857222557,
+          "training_positive": 57,
+          "training_negative": 57
+        }
+      },
+      "cluster_agreement": {
+        "kmeans_k": 4,
+        "ari_vs_louvain": 0.189019935288592,
+        "nmi_vs_louvain": 0.2484413010341346,
+        "ari_vs_region_proxy": -0.007727782624953259,
+        "nmi_vs_region_proxy": 0.302712298718391
+      }
+    },
+    "leakage_audit": {
+      "walk_graph_validation": "2021 annual graph only",
+      "walk_graph_test": "2022 annual graph only",
+      "baseline_graph_validation": "2021 annual graph only",
+      "baseline_graph_test": "2022 annual graph only",
+      "parameter_selection_metric": "validation_auc",
+      "test_used_for_selection": false,
+      "same_validation_pairs_for_all_configurations": true
+    }
+  },
+  "fit_seconds": 4.80047449999995,
+  "history": {
+    "validation_top": [
+      {
+        "configuration": "p=0.5,q=1,d=16",
+        "auc": 0.8061224489795918
+      },
+      {
+        "configuration": "p=0.5,q=2,d=64",
+        "auc": 0.7857142857142857
+      },
+      {
+        "configuration": "p=2,q=2,d=64",
+        "auc": 0.7857142857142857
+      },
+      {
+        "configuration": "p=0.5,q=2,d=16",
+        "auc": 0.7806122448979591
+      },
+      {
+        "configuration": "p=1,q=2,d=8",
+        "auc": 0.7755102040816326
+      },
+      {
+        "configuration": "p=0.5,q=2,d=32",
+        "auc": 0.7653061224489797
+      },
+      {
+        "configuration": "p=1,q=1,d=32",
+        "auc": 0.7602040816326531
+      },
+      {
+        "configuration": "p=0.5,q=0.5,d=16",
+        "auc": 0.7551020408163266
+      },
+      {
+        "configuration": "p=2,q=1,d=16",
+        "auc": 0.7551020408163266
+      },
+      {
+        "configuration": "p=2,q=2,d=32",
+        "auc": 0.7551020408163266
+      },
+      {
+        "configuration": "p=0.5,q=0.5,d=8",
+        "auc": 0.7551020408163265
+      },
+      {
+        "configuration": "p=1,q=0.5,d=8",
+        "auc": 0.7448979591836734
+      }
+    ],
+    "selected_configuration": {
+      "p": 0.5,
+      "q": 1.0,
+      "dimension": 16,
+      "selection_rule": "maximum validation AUC, AP as tie-break; test metrics not inspected"
+    }
+  }
+}

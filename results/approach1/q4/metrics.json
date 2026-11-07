@@ -1,0 +1,2101 @@
+{
+  "params": {
+    "seed": 42,
+    "top_k": 10,
+    "resolutions": [
+      0.5,
+      1.0,
+      1.5
+    ]
+  },
+  "metrics": {
+    "years": [
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "construction": {
+      "top_k_exports_per_reporter": 10,
+      "undirected_weight": "sum of reciprocal directed exports",
+      "mst_distance": "1/log(1+trade_value_usd)"
+    },
+    "per_year": {
+      "2014": {
+        "nodes": 21,
+        "directed_edges": 210,
+        "undirected_edges": 143,
+        "directed_density": 0.5,
+        "undirected_density": 0.680952380952381,
+        "mean_degree": 13.619047619047619,
+        "degree_loglog_slope": -1.1510751085524529,
+        "assortativity": -0.2182887749496369,
+        "connected_components": 1,
+        "isolated_nodes": 0,
+        "self_loops_directed": 0,
+        "self_loops_undirected": 0,
+        "mst": {
+          "forest_edges": 20,
+          "forest_components": 1,
+          "largest_component_nodes": 21,
+          "largest_component_diameter": 5,
+          "total_distance": 0.7822545264361385
+        },
+        "centrality": {
+          "pagerank": [
+            [
+              842,
+              0.18298782140069322
+            ],
+            [
+              156,
+              0.16715639523983059
+            ],
+            [
+              344,
+              0.07764342416462595
+            ],
+            [
+              276,
+              0.06733184673618273
+            ],
+            [
+              392,
+              0.06551119927601133
+            ],
+            [
+              484,
+              0.061011428364430784
+            ],
+            [
+              528,
+              0.049117519600641764
+            ],
+            [
+              410,
+              0.04768656556717272
+            ],
+            [
+              826,
+              0.047489346610548405
+            ],
+            [
+              702,
+              0.03111770487708619
+            ]
+          ],
+          "betweenness": [
+            [
+              156,
+              0.18421052631578946
+            ],
+            [
+              842,
+              0.09473684210526316
+            ],
+            [
+              699,
+              0.031578947368421054
+            ],
+            [
+              490,
+              0.02631578947368421
+            ],
+            [
+              276,
+              0.005263157894736842
+            ],
+            [
+              682,
+              0.005263157894736842
+            ],
+            [
+              826,
+              0.005263157894736842
+            ],
+            [
+              392,
+              0.0
+            ],
+            [
+              410,
+              0.0
+            ],
+            [
+              344,
+              0.0
+            ]
+          ],
+          "weighted_degree": [
+            [
+              156,
+              2619292608175.189
+            ],
+            [
+              842,
+              2152725012870.775
+            ],
+            [
+              344,
+              1044641316313.16
+            ],
+            [
+              392,
+              980797991693.684
+            ],
+            [
+              276,
+              945494076120.566
+            ],
+            [
+              410,
+              708118481308.026
+            ],
+            [
+              484,
+              612152273593.261
+            ],
+            [
+              528,
+              582614053518.387
+            ],
+            [
+              826,
+              520156786830.62103
+            ],
+            [
+              490,
+              519850949357.593
+            ]
+          ]
+        },
+        "communities": {
+          "resolution": 1.0,
+          "community_count": 4,
+          "modularity": 0.22490020179634196,
+          "ari_vs_region_proxy": 0.6007604562737643,
+          "nmi_vs_region_proxy": 0.8170620893059666
+        },
+        "resolution_sweep": {
+          "0.5": {
+            "resolution": 0.5,
+            "community_count": 1,
+            "modularity": 0.0,
+            "ari_vs_region_proxy": 0.0,
+            "nmi_vs_region_proxy": 0.0
+          },
+          "1.0": {
+            "resolution": 1.0,
+            "community_count": 4,
+            "modularity": 0.22490020179634196,
+            "ari_vs_region_proxy": 0.6007604562737643,
+            "nmi_vs_region_proxy": 0.8170620893059666
+          },
+          "1.5": {
+            "resolution": 1.5,
+            "community_count": 6,
+            "modularity": 0.22291603341777924,
+            "ari_vs_region_proxy": 0.6405477367820464,
+            "nmi_vs_region_proxy": 0.8304095975853808
+          }
+        }
+      },
+      "2015": {
+        "nodes": 21,
+        "directed_edges": 210,
+        "undirected_edges": 147,
+        "directed_density": 0.5,
+        "undirected_density": 0.7,
+        "mean_degree": 14.0,
+        "degree_loglog_slope": -0.7465265726074005,
+        "assortativity": -0.23111864226336665,
+        "connected_components": 1,
+        "isolated_nodes": 0,
+        "self_loops_directed": 0,
+        "self_loops_undirected": 0,
+        "mst": {
+          "forest_edges": 20,
+          "forest_components": 1,
+          "largest_component_nodes": 21,
+          "largest_component_diameter": 6,
+          "total_distance": 0.7861246659054
+        },
+        "centrality": {
+          "pagerank": [
+            [
+              842,
+              0.19508565702180602
+            ],
+            [
+              156,
+              0.1639877224780358
+            ],
+            [
+              344,
+              0.07661029457079041
+            ],
+            [
+              484,
+              0.06604488242805505
+            ],
+            [
+              276,
+              0.06357744819166372
+            ],
+            [
+              392,
+              0.062541832448992
+            ],
+            [
+              826,
+              0.049106167846082405
+            ],
+            [
+              410,
+              0.04800022793070295
+            ],
+            [
+              528,
+              0.04256317310553169
+            ],
+            [
+              702,
+              0.036962663649123415
+            ]
+          ],
+          "betweenness": [
+            [
+              156,
+              0.15263157894736842
+            ],
+            [
+              842,
+              0.09473684210526316
+            ],
+            [
+              490,
+              0.02631578947368421
+            ],
+            [
+              699,
+              0.02631578947368421
+            ],
+            [
+              276,
+              0.021052631578947368
+            ],
+            [
+              392,
+              0.005263157894736842
+            ],
+            [
+              682,
+              0.005263157894736842
+            ],
+            [
+              410,
+              0.0
+            ],
+            [
+              344,
+              0.0
+            ],
+            [
+              643,
+              0.0
+            ]
+          ],
+          "weighted_degree": [
+            [
+              156,
+              2459315506818.64
+            ],
+            [
+              842,
+              2114159042780.381
+            ],
+            [
+              344,
+              981451717696.319
+            ],
+            [
+              392,
+              867825470751.188
+            ],
+            [
+              276,
+              833247794268.8989
+            ],
+            [
+              410,
+              662861583170.744
+            ],
+            [
+              484,
+              596084437624.117
+            ],
+            [
+              826,
+              498702385442.691
+            ],
+            [
+              702,
+              476658304441.721
+            ],
+            [
+              528,
+              466373845379.79297
+            ]
+          ]
+        },
+        "communities": {
+          "resolution": 1.0,
+          "community_count": 4,
+          "modularity": 0.2025258848835898,
+          "ari_vs_region_proxy": 0.6007604562737643,
+          "nmi_vs_region_proxy": 0.8170620893059666
+        },
+        "resolution_sweep": {
+          "0.5": {
+            "resolution": 0.5,
+            "community_count": 1,
+            "modularity": 0.0,
+            "ari_vs_region_proxy": 0.0,
+            "nmi_vs_region_proxy": 0.0
+          },
+          "1.0": {
+            "resolution": 1.0,
+            "community_count": 4,
+            "modularity": 0.2025258848835898,
+            "ari_vs_region_proxy": 0.6007604562737643,
+            "nmi_vs_region_proxy": 0.8170620893059666
+          },
+          "1.5": {
+            "resolution": 1.5,
+            "community_count": 7,
+            "modularity": 0.17450211270606847,
+            "ari_vs_region_proxy": 0.5325779036827195,
+            "nmi_vs_region_proxy": 0.801233553486791
+          }
+        }
+      },
+      "2016": {
+        "nodes": 21,
+        "directed_edges": 210,
+        "undirected_edges": 152,
+        "directed_density": 0.5,
+        "undirected_density": 0.7238095238095238,
+        "mean_degree": 14.476190476190476,
+        "degree_loglog_slope": -0.34661544568462993,
+        "assortativity": -0.2632470488592491,
+        "connected_components": 1,
+        "isolated_nodes": 0,
+        "self_loops_directed": 0,
+        "self_loops_undirected": 0,
+        "mst": {
+          "forest_edges": 20,
+          "forest_components": 1,
+          "largest_component_nodes": 21,
+          "largest_component_diameter": 5,
+          "total_distance": 0.7872274233467683
+        },
+        "centrality": {
+          "pagerank": [
+            [
+              842,
+              0.1966396439255196
+            ],
+            [
+              156,
+              0.1618227025669417
+            ],
+            [
+              344,
+              0.07444383366261727
+            ],
+            [
+              276,
+              0.06627912108835854
+            ],
+            [
+              484,
+              0.06626310711806399
+            ],
+            [
+              392,
+              0.06254395123777373
+            ],
+            [
+              826,
+              0.0546292485275724
+            ],
+            [
+              410,
+              0.04597306301172595
+            ],
+            [
+              528,
+              0.04523658456119358
+            ],
+            [
+              702,
+              0.035911497355196796
+            ]
+          ],
+          "betweenness": [
+            [
+              156,
+              0.14210526315789473
+            ],
+            [
+              842,
+              0.09999999999999999
+            ],
+            [
+              490,
+              0.02631578947368421
+            ],
+            [
+              699,
+              0.015789473684210527
+            ],
+            [
+              826,
+              0.010526315789473684
+            ],
+            [
+              276,
+              0.005263157894736842
+            ],
+            [
+              682,
+              0.005263157894736842
+            ],
+            [
+              392,
+              0.0
+            ],
+            [
+              410,
+              0.0
+            ],
+            [
+              344,
+              0.0
+            ]
+          ],
+          "weighted_degree": [
+            [
+              156,
+              2343439049387.072
+            ],
+            [
+              842,
+              2059064201811.921
+            ],
+            [
+              344,
+              946804487074.304
+            ],
+            [
+              392,
+              865386832864.294
+            ],
+            [
+              276,
+              825737450218.725
+            ],
+            [
+              410,
+              621216564156.616
+            ],
+            [
+              484,
+              585528795575.302
+            ],
+            [
+              826,
+              502555978601.369
+            ],
+            [
+              528,
+              466315024110.274
+            ],
+            [
+              702,
+              448852366675.427
+            ]
+          ]
+        },
+        "communities": {
+          "resolution": 1.0,
+          "community_count": 3,
+          "modularity": 0.19593641031543005,
+          "ari_vs_region_proxy": 0.30493273542600896,
+          "nmi_vs_region_proxy": 0.6034778516928013
+        },
+        "resolution_sweep": {
+          "0.5": {
+            "resolution": 0.5,
+            "community_count": 1,
+            "modularity": 0.0,
+            "ari_vs_region_proxy": 0.0,
+            "nmi_vs_region_proxy": 0.0
+          },
+          "1.0": {
+            "resolution": 1.0,
+            "community_count": 3,
+            "modularity": 0.19593641031543005,
+            "ari_vs_region_proxy": 0.30493273542600896,
+            "nmi_vs_region_proxy": 0.6034778516928013
+          },
+          "1.5": {
+            "resolution": 1.5,
+            "community_count": 7,
+            "modularity": 0.17002783502543664,
+            "ari_vs_region_proxy": 0.5325779036827195,
+            "nmi_vs_region_proxy": 0.801233553486791
+          }
+        }
+      },
+      "2017": {
+        "nodes": 21,
+        "directed_edges": 210,
+        "undirected_edges": 149,
+        "directed_density": 0.5,
+        "undirected_density": 0.7095238095238096,
+        "mean_degree": 14.19047619047619,
+        "degree_loglog_slope": -0.8414808024633861,
+        "assortativity": -0.2549541828201578,
+        "connected_components": 1,
+        "isolated_nodes": 0,
+        "self_loops_directed": 0,
+        "self_loops_undirected": 0,
+        "mst": {
+          "forest_edges": 20,
+          "forest_components": 1,
+          "largest_component_nodes": 21,
+          "largest_component_diameter": 6,
+          "total_distance": 0.786174949590435
+        },
+        "centrality": {
+          "pagerank": [
+            [
+              842,
+              0.1933107919484033
+            ],
+            [
+              156,
+              0.16834678116229004
+            ],
+            [
+              344,
+              0.07180577582416178
+            ],
+            [
+              276,
+              0.06644202830766957
+            ],
+            [
+              484,
+              0.06397498517584789
+            ],
+            [
+              392,
+              0.0624032040626103
+            ],
+            [
+              826,
+              0.04964416493231138
+            ],
+            [
+              410,
+              0.04885748835437172
+            ],
+            [
+              528,
+              0.04529614541195519
+            ],
+            [
+              702,
+              0.03607528961413017
+            ]
+          ],
+          "betweenness": [
+            [
+              156,
+              0.21052631578947367
+            ],
+            [
+              842,
+              0.08421052631578947
+            ],
+            [
+              699,
+              0.021052631578947368
+            ],
+            [
+              276,
+              0.005263157894736842
+            ],
+            [
+              392,
+              0.0
+            ],
+            [
+              410,
+              0.0
+            ],
+            [
+              344,
+              0.0
+            ],
+            [
+              490,
+              0.0
+            ],
+            [
+              643,
+              0.0
+            ],
+            [
+              704,
+              0.0
+            ]
+          ],
+          "weighted_degree": [
+            [
+              156,
+              2611971336965.194
+            ],
+            [
+              842,
+              2229630680642.849
+            ],
+            [
+              344,
+              994305433245.779
+            ],
+            [
+              392,
+              940633510661.276
+            ],
+            [
+              276,
+              898587624749.096
+            ],
+            [
+              410,
+              729727035484.775
+            ],
+            [
+              484,
+              634369685123.58
+            ],
+            [
+              528,
+              519624775921.449
+            ],
+            [
+              826,
+              497906532241.402
+            ],
+            [
+              702,
+              496385577852.853
+            ]
+          ]
+        },
+        "communities": {
+          "resolution": 1.0,
+          "community_count": 4,
+          "modularity": 0.19674011998186366,
+          "ari_vs_region_proxy": 0.4110681789854169,
+          "nmi_vs_region_proxy": 0.717514828639249
+        },
+        "resolution_sweep": {
+          "0.5": {
+            "resolution": 0.5,
+            "community_count": 1,
+            "modularity": 0.0,
+            "ari_vs_region_proxy": 0.0,
+            "nmi_vs_region_proxy": 0.0
+          },
+          "1.0": {
+            "resolution": 1.0,
+            "community_count": 4,
+            "modularity": 0.19674011998186366,
+            "ari_vs_region_proxy": 0.4110681789854169,
+            "nmi_vs_region_proxy": 0.717514828639249
+          },
+          "1.5": {
+            "resolution": 1.5,
+            "community_count": 6,
+            "modularity": 0.16025103346084255,
+            "ari_vs_region_proxy": 0.445859872611465,
+            "nmi_vs_region_proxy": 0.7473575284611218
+          }
+        }
+      },
+      "2018": {
+        "nodes": 21,
+        "directed_edges": 210,
+        "undirected_edges": 148,
+        "directed_density": 0.5,
+        "undirected_density": 0.7047619047619048,
+        "mean_degree": 14.095238095238095,
+        "degree_loglog_slope": -0.5876938303303072,
+        "assortativity": -0.2626425715299455,
+        "connected_components": 1,
+        "isolated_nodes": 0,
+        "self_loops_directed": 0,
+        "self_loops_undirected": 0,
+        "mst": {
+          "forest_edges": 20,
+          "forest_components": 1,
+          "largest_component_nodes": 21,
+          "largest_component_diameter": 6,
+          "total_distance": 0.7832674169502648
+        },
+        "centrality": {
+          "pagerank": [
+            [
+              842,
+              0.19575428435179407
+            ],
+            [
+              156,
+              0.167288843571115
+            ],
+            [
+              344,
+              0.06932752619972067
+            ],
+            [
+              276,
+              0.06733727542847182
+            ],
+            [
+              484,
+              0.06561660596074284
+            ],
+            [
+              392,
+              0.06150043335214882
+            ],
+            [
+              528,
+              0.04894403377580934
+            ],
+            [
+              826,
+              0.0487702909170613
+            ],
+            [
+              410,
+              0.04874522750349465
+            ],
+            [
+              699,
+              0.037743718891604355
+            ]
+          ],
+          "betweenness": [
+            [
+              156,
+              0.23157894736842105
+            ],
+            [
+              842,
+              0.06842105263157895
+            ],
+            [
+              699,
+              0.02631578947368421
+            ],
+            [
+              392,
+              0.0
+            ],
+            [
+              410,
+              0.0
+            ],
+            [
+              344,
+              0.0
+            ],
+            [
+              490,
+              0.0
+            ],
+            [
+              643,
+              0.0
+            ],
+            [
+              704,
+              0.0
+            ],
+            [
+              36,
+              0.0
+            ]
+          ],
+          "weighted_degree": [
+            [
+              156,
+              2859402546215.503
+            ],
+            [
+              842,
+              2422331546245.454
+            ],
+            [
+              344,
+              1050649916479.548
+            ],
+            [
+              392,
+              1003526293348.712
+            ],
+            [
+              276,
+              978275035004.5859
+            ],
+            [
+              410,
+              790679318691.117
+            ],
+            [
+              484,
+              691835638380.55
+            ],
+            [
+              528,
+              593646214432.808
+            ],
+            [
+              826,
+              526816367827.586
+            ],
+            [
+              702,
+              498095273876.79803
+            ]
+          ]
+        },
+        "communities": {
+          "resolution": 1.0,
+          "community_count": 4,
+          "modularity": 0.1991485113631773,
+          "ari_vs_region_proxy": 0.4110681789854169,
+          "nmi_vs_region_proxy": 0.717514828639249
+        },
+        "resolution_sweep": {
+          "0.5": {
+            "resolution": 0.5,
+            "community_count": 1,
+            "modularity": 0.0,
+            "ari_vs_region_proxy": 0.0,
+            "nmi_vs_region_proxy": 0.0
+          },
+          "1.0": {
+            "resolution": 1.0,
+            "community_count": 4,
+            "modularity": 0.1991485113631773,
+            "ari_vs_region_proxy": 0.4110681789854169,
+            "nmi_vs_region_proxy": 0.717514828639249
+          },
+          "1.5": {
+            "resolution": 1.5,
+            "community_count": 6,
+            "modularity": 0.16168626367484562,
+            "ari_vs_region_proxy": 0.445859872611465,
+            "nmi_vs_region_proxy": 0.7473575284611218
+          }
+        }
+      },
+      "2019": {
+        "nodes": 21,
+        "directed_edges": 210,
+        "undirected_edges": 147,
+        "directed_density": 0.5,
+        "undirected_density": 0.7,
+        "mean_degree": 14.0,
+        "degree_loglog_slope": -1.4739387336557508,
+        "assortativity": -0.2578234845137147,
+        "connected_components": 1,
+        "isolated_nodes": 0,
+        "self_loops_directed": 0,
+        "self_loops_undirected": 0,
+        "mst": {
+          "forest_edges": 20,
+          "forest_components": 1,
+          "largest_component_nodes": 21,
+          "largest_component_diameter": 6,
+          "total_distance": 0.7836260010777703
+        },
+        "centrality": {
+          "pagerank": [
+            [
+              842,
+              0.19829860343642636
+            ],
+            [
+              156,
+              0.16322900894335032
+            ],
+            [
+              276,
+              0.06774884346478781
+            ],
+            [
+              484,
+              0.06569570272965053
+            ],
+            [
+              392,
+              0.06185071604247049
+            ],
+            [
+              344,
+              0.058494727972463974
+            ],
+            [
+              826,
+              0.05043018700058604
+            ],
+            [
+              528,
+              0.04937761125088289
+            ],
+            [
+              410,
+              0.047532756234813234
+            ],
+            [
+              699,
+              0.036523066215935714
+            ]
+          ],
+          "betweenness": [
+            [
+              156,
+              0.23157894736842105
+            ],
+            [
+              842,
+              0.08421052631578947
+            ],
+            [
+              699,
+              0.015789473684210527
+            ],
+            [
+              392,
+              0.0
+            ],
+            [
+              410,
+              0.0
+            ],
+            [
+              344,
+              0.0
+            ],
+            [
+              490,
+              0.0
+            ],
+            [
+              643,
+              0.0
+            ],
+            [
+              704,
+              0.0
+            ],
+            [
+              36,
+              0.0
+            ]
+          ],
+          "weighted_degree": [
+            [
+              156,
+              2751806204243.528
+            ],
+            [
+              842,
+              2381927974628.896
+            ],
+            [
+              392,
+              963887540388.676
+            ],
+            [
+              276,
+              943159197071.714
+            ],
+            [
+              344,
+              925558263725.8619
+            ],
+            [
+              410,
+              724429714560.557
+            ],
+            [
+              484,
+              683321308375.625
+            ],
+            [
+              528,
+              585977702112.972
+            ],
+            [
+              826,
+              540303089435.02997
+            ],
+            [
+              702,
+              460690138510.202
+            ]
+          ]
+        },
+        "communities": {
+          "resolution": 1.0,
+          "community_count": 4,
+          "modularity": 0.1996442974894879,
+          "ari_vs_region_proxy": 0.4110681789854169,
+          "nmi_vs_region_proxy": 0.717514828639249
+        },
+        "resolution_sweep": {
+          "0.5": {
+            "resolution": 0.5,
+            "community_count": 1,
+            "modularity": 0.0,
+            "ari_vs_region_proxy": 0.0,
+            "nmi_vs_region_proxy": 0.0
+          },
+          "1.0": {
+            "resolution": 1.0,
+            "community_count": 4,
+            "modularity": 0.1996442974894879,
+            "ari_vs_region_proxy": 0.4110681789854169,
+            "nmi_vs_region_proxy": 0.717514828639249
+          },
+          "1.5": {
+            "resolution": 1.5,
+            "community_count": 6,
+            "modularity": 0.1603066965791091,
+            "ari_vs_region_proxy": 0.4931453948638733,
+            "nmi_vs_region_proxy": 0.7631017535312855
+          }
+        }
+      },
+      "2020": {
+        "nodes": 21,
+        "directed_edges": 210,
+        "undirected_edges": 150,
+        "directed_density": 0.5,
+        "undirected_density": 0.7142857142857143,
+        "mean_degree": 14.285714285714286,
+        "degree_loglog_slope": -1.7917333040306376,
+        "assortativity": -0.23220463360939883,
+        "connected_components": 1,
+        "isolated_nodes": 0,
+        "self_loops_directed": 0,
+        "self_loops_undirected": 0,
+        "mst": {
+          "forest_edges": 20,
+          "forest_components": 1,
+          "largest_component_nodes": 21,
+          "largest_component_diameter": 6,
+          "total_distance": 0.7858098775632323
+        },
+        "centrality": {
+          "pagerank": [
+            [
+              842,
+              0.19719946031306543
+            ],
+            [
+              156,
+              0.17562383381669566
+            ],
+            [
+              276,
+              0.07058532901927907
+            ],
+            [
+              344,
+              0.05992471698627568
+            ],
+            [
+              392,
+              0.059733163844605044
+            ],
+            [
+              484,
+              0.05953830691395487
+            ],
+            [
+              826,
+              0.051852931952398665
+            ],
+            [
+              410,
+              0.04960315825957287
+            ],
+            [
+              528,
+              0.0495598861573639
+            ],
+            [
+              490,
+              0.033349281582686345
+            ]
+          ],
+          "betweenness": [
+            [
+              156,
+              0.24210526315789474
+            ],
+            [
+              842,
+              0.06842105263157895
+            ],
+            [
+              699,
+              0.005263157894736842
+            ],
+            [
+              392,
+              0.0
+            ],
+            [
+              410,
+              0.0
+            ],
+            [
+              344,
+              0.0
+            ],
+            [
+              490,
+              0.0
+            ],
+            [
+              643,
+              0.0
+            ],
+            [
+              704,
+              0.0
+            ],
+            [
+              36,
+              0.0
+            ]
+          ],
+          "weighted_degree": [
+            [
+              156,
+              2862002129541.5
+            ],
+            [
+              842,
+              2275070412603.187
+            ],
+            [
+              344,
+              942865731218.788
+            ],
+            [
+              392,
+              903911260780.709
+            ],
+            [
+              276,
+              890134243239.888
+            ],
+            [
+              410,
+              709601550579.755
+            ],
+            [
+              484,
+              594514402879.019
+            ],
+            [
+              528,
+              541744418824.071
+            ],
+            [
+              490,
+              509207994029.072
+            ],
+            [
+              826,
+              497050653536.847
+            ]
+          ]
+        },
+        "communities": {
+          "resolution": 1.0,
+          "community_count": 4,
+          "modularity": 0.17659026201589317,
+          "ari_vs_region_proxy": 0.4110681789854169,
+          "nmi_vs_region_proxy": 0.717514828639249
+        },
+        "resolution_sweep": {
+          "0.5": {
+            "resolution": 0.5,
+            "community_count": 1,
+            "modularity": 0.0,
+            "ari_vs_region_proxy": 0.0,
+            "nmi_vs_region_proxy": 0.0
+          },
+          "1.0": {
+            "resolution": 1.0,
+            "community_count": 4,
+            "modularity": 0.17659026201589317,
+            "ari_vs_region_proxy": 0.4110681789854169,
+            "nmi_vs_region_proxy": 0.717514828639249
+          },
+          "1.5": {
+            "resolution": 1.5,
+            "community_count": 6,
+            "modularity": 0.13865655435609836,
+            "ari_vs_region_proxy": 0.4931453948638733,
+            "nmi_vs_region_proxy": 0.7631017535312855
+          }
+        }
+      },
+      "2021": {
+        "nodes": 21,
+        "directed_edges": 210,
+        "undirected_edges": 147,
+        "directed_density": 0.5,
+        "undirected_density": 0.7,
+        "mean_degree": 14.0,
+        "degree_loglog_slope": -1.0990723766619535,
+        "assortativity": -0.21840160340723877,
+        "connected_components": 1,
+        "isolated_nodes": 0,
+        "self_loops_directed": 0,
+        "self_loops_undirected": 0,
+        "mst": {
+          "forest_edges": 20,
+          "forest_components": 1,
+          "largest_component_nodes": 21,
+          "largest_component_diameter": 6,
+          "total_distance": 0.7782325839044903
+        },
+        "centrality": {
+          "pagerank": [
+            [
+              842,
+              0.19972721349505293
+            ],
+            [
+              156,
+              0.17379346551683503
+            ],
+            [
+              276,
+              0.06891349658262862
+            ],
+            [
+              484,
+              0.06414877913469558
+            ],
+            [
+              344,
+              0.05864975058926268
+            ],
+            [
+              392,
+              0.05587978476503857
+            ],
+            [
+              528,
+              0.051467160593029804
+            ],
+            [
+              410,
+              0.05054920035371484
+            ],
+            [
+              826,
+              0.04592774491036557
+            ],
+            [
+              699,
+              0.03743934382480968
+            ]
+          ],
+          "betweenness": [
+            [
+              156,
+              0.24736842105263157
+            ],
+            [
+              842,
+              0.07368421052631578
+            ],
+            [
+              699,
+              0.010526315789473684
+            ],
+            [
+              392,
+              0.0
+            ],
+            [
+              410,
+              0.0
+            ],
+            [
+              344,
+              0.0
+            ],
+            [
+              490,
+              0.0
+            ],
+            [
+              643,
+              0.0
+            ],
+            [
+              704,
+              0.0
+            ],
+            [
+              36,
+              0.0
+            ]
+          ],
+          "weighted_degree": [
+            [
+              156,
+              3588867792894.89
+            ],
+            [
+              842,
+              2782482079090.873
+            ],
+            [
+              344,
+              1168809817309.189
+            ],
+            [
+              392,
+              1053168094676.872
+            ],
+            [
+              276,
+              1052714816758.453
+            ],
+            [
+              410,
+              893724382204.026
+            ],
+            [
+              484,
+              736120715409.731
+            ],
+            [
+              528,
+              691413869699.637
+            ],
+            [
+              490,
+              655554568113.463
+            ],
+            [
+              704,
+              531822253407.602
+            ]
+          ]
+        },
+        "communities": {
+          "resolution": 1.0,
+          "community_count": 4,
+          "modularity": 0.1810993210697976,
+          "ari_vs_region_proxy": 0.4110681789854169,
+          "nmi_vs_region_proxy": 0.717514828639249
+        },
+        "resolution_sweep": {
+          "0.5": {
+            "resolution": 0.5,
+            "community_count": 1,
+            "modularity": 0.0,
+            "ari_vs_region_proxy": 0.0,
+            "nmi_vs_region_proxy": 0.0
+          },
+          "1.0": {
+            "resolution": 1.0,
+            "community_count": 4,
+            "modularity": 0.1810993210697976,
+            "ari_vs_region_proxy": 0.4110681789854169,
+            "nmi_vs_region_proxy": 0.717514828639249
+          },
+          "1.5": {
+            "resolution": 1.5,
+            "community_count": 6,
+            "modularity": 0.144271575243184,
+            "ari_vs_region_proxy": 0.4931453948638733,
+            "nmi_vs_region_proxy": 0.7631017535312855
+          }
+        }
+      },
+      "2022": {
+        "nodes": 21,
+        "directed_edges": 200,
+        "undirected_edges": 138,
+        "directed_density": 0.47619047619047616,
+        "undirected_density": 0.6571428571428571,
+        "mean_degree": 13.142857142857142,
+        "degree_loglog_slope": 0.3082000189412471,
+        "assortativity": -0.14568787958807117,
+        "connected_components": 1,
+        "isolated_nodes": 0,
+        "self_loops_directed": 0,
+        "self_loops_undirected": 0,
+        "mst": {
+          "forest_edges": 20,
+          "forest_components": 1,
+          "largest_component_nodes": 21,
+          "largest_component_diameter": 6,
+          "total_distance": 0.7780604704943439
+        },
+        "centrality": {
+          "pagerank": [
+            [
+              842,
+              0.20251937016186866
+            ],
+            [
+              156,
+              0.15688379183112988
+            ],
+            [
+              484,
+              0.06743284710436384
+            ],
+            [
+              276,
+              0.06631101565677865
+            ],
+            [
+              392,
+              0.05558173977280688
+            ],
+            [
+              528,
+              0.05296003602065159
+            ],
+            [
+              344,
+              0.05202135477330613
+            ],
+            [
+              410,
+              0.0508708867546481
+            ],
+            [
+              699,
+              0.041889989648457145
+            ],
+            [
+              826,
+              0.0379955222371153
+            ]
+          ],
+          "betweenness": [
+            [
+              156,
+              0.1631578947368421
+            ],
+            [
+              842,
+              0.11578947368421053
+            ],
+            [
+              276,
+              0.06842105263157895
+            ],
+            [
+              784,
+              0.021052631578947368
+            ],
+            [
+              699,
+              0.015789473684210527
+            ],
+            [
+              344,
+              0.005263157894736842
+            ],
+            [
+              528,
+              0.005263157894736842
+            ],
+            [
+              392,
+              0.0
+            ],
+            [
+              410,
+              0.0
+            ],
+            [
+              490,
+              0.0
+            ]
+          ],
+          "weighted_degree": [
+            [
+              156,
+              3488374549362.149
+            ],
+            [
+              842,
+              3080762778044.097
+            ],
+            [
+              392,
+              1081401315193.973
+            ],
+            [
+              344,
+              1071126344027.2871
+            ],
+            [
+              276,
+              1065452590449.05
+            ],
+            [
+              410,
+              948281981678.2
+            ],
+            [
+              484,
+              864792025170.326
+            ],
+            [
+              528,
+              746749567130.856
+            ],
+            [
+              490,
+              640912190527.467
+            ],
+            [
+              702,
+              601476239634.698
+            ]
+          ]
+        },
+        "communities": {
+          "resolution": 1.0,
+          "community_count": 4,
+          "modularity": 0.18685128206628718,
+          "ari_vs_region_proxy": 0.4110681789854169,
+          "nmi_vs_region_proxy": 0.717514828639249
+        },
+        "resolution_sweep": {
+          "0.5": {
+            "resolution": 0.5,
+            "community_count": 1,
+            "modularity": 1.1102230246251565e-16,
+            "ari_vs_region_proxy": 0.0,
+            "nmi_vs_region_proxy": 0.0
+          },
+          "1.0": {
+            "resolution": 1.0,
+            "community_count": 4,
+            "modularity": 0.18685128206628718,
+            "ari_vs_region_proxy": 0.4110681789854169,
+            "nmi_vs_region_proxy": 0.717514828639249
+          },
+          "1.5": {
+            "resolution": 1.5,
+            "community_count": 7,
+            "modularity": 0.13961420173106412,
+            "ari_vs_region_proxy": 0.6074334726193095,
+            "nmi_vs_region_proxy": 0.8219290335063087
+          }
+        }
+      },
+      "2023": {
+        "nodes": 21,
+        "directed_edges": 200,
+        "undirected_edges": 139,
+        "directed_density": 0.47619047619047616,
+        "undirected_density": 0.6619047619047619,
+        "mean_degree": 13.238095238095237,
+        "degree_loglog_slope": 0.09994235219991043,
+        "assortativity": -0.17316389578953945,
+        "connected_components": 1,
+        "isolated_nodes": 0,
+        "self_loops_directed": 0,
+        "self_loops_undirected": 0,
+        "mst": {
+          "forest_edges": 20,
+          "forest_components": 1,
+          "largest_component_nodes": 21,
+          "largest_component_diameter": 6,
+          "total_distance": 0.7763981621745502
+        },
+        "centrality": {
+          "pagerank": [
+            [
+              842,
+              0.20350973655270016
+            ],
+            [
+              156,
+              0.1536375578296335
+            ],
+            [
+              484,
+              0.06914301655415409
+            ],
+            [
+              276,
+              0.06568973759030702
+            ],
+            [
+              528,
+              0.054787603933221414
+            ],
+            [
+              392,
+              0.053954309885557813
+            ],
+            [
+              344,
+              0.05032521636446345
+            ],
+            [
+              410,
+              0.04919305894898105
+            ],
+            [
+              699,
+              0.0414123067807689
+            ],
+            [
+              826,
+              0.040028300409290826
+            ]
+          ],
+          "betweenness": [
+            [
+              156,
+              0.23684210526315788
+            ],
+            [
+              842,
+              0.11578947368421053
+            ],
+            [
+              344,
+              0.010526315789473684
+            ],
+            [
+              699,
+              0.010526315789473684
+            ],
+            [
+              392,
+              0.0
+            ],
+            [
+              410,
+              0.0
+            ],
+            [
+              490,
+              0.0
+            ],
+            [
+              643,
+              0.0
+            ],
+            [
+              704,
+              0.0
+            ],
+            [
+              36,
+              0.0
+            ]
+          ],
+          "weighted_degree": [
+            [
+              156,
+              3254629171675.983
+            ],
+            [
+              842,
+              2990922149306.4067
+            ],
+            [
+              276,
+              1023961310270.067
+            ],
+            [
+              344,
+              1000097075643.21
+            ],
+            [
+              392,
+              988835844945.689
+            ],
+            [
+              484,
+              880871752458.251
+            ],
+            [
+              410,
+              860629260562.777
+            ],
+            [
+              528,
+              712807331246.294
+            ],
+            [
+              702,
+              557199052924.578
+            ],
+            [
+              704,
+              542427547185.571
+            ]
+          ]
+        },
+        "communities": {
+          "resolution": 1.0,
+          "community_count": 3,
+          "modularity": 0.19422888422028714,
+          "ari_vs_region_proxy": 0.23766816143497757,
+          "nmi_vs_region_proxy": 0.5287302956041887
+        },
+        "resolution_sweep": {
+          "0.5": {
+            "resolution": 0.5,
+            "community_count": 1,
+            "modularity": 2.220446049250313e-16,
+            "ari_vs_region_proxy": 0.0,
+            "nmi_vs_region_proxy": 0.0
+          },
+          "1.0": {
+            "resolution": 1.0,
+            "community_count": 3,
+            "modularity": 0.19422888422028714,
+            "ari_vs_region_proxy": 0.23766816143497757,
+            "nmi_vs_region_proxy": 0.5287302956041887
+          },
+          "1.5": {
+            "resolution": 1.5,
+            "community_count": 6,
+            "modularity": 0.15279229980262768,
+            "ari_vs_region_proxy": 0.3408419497784343,
+            "nmi_vs_region_proxy": 0.6936655205362504
+          }
+        }
+      }
+    },
+    "community_migration": {
+      "2014->2015": {
+        "changed_share": 0.0,
+        "ari": 1.0,
+        "contingency": [
+          [
+            6,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            8
+          ]
+        ]
+      },
+      "2015->2016": {
+        "changed_share": 0.38095238095238093,
+        "ari": 0.4067796610169492,
+        "contingency": [
+          [
+            6,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            4
+          ],
+          [
+            6,
+            0,
+            2
+          ]
+        ]
+      },
+      "2016->2017": {
+        "changed_share": 0.14285714285714285,
+        "ari": 0.784394250513347,
+        "contingency": [
+          [
+            11,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            2
+          ]
+        ]
+      },
+      "2017->2018": {
+        "changed_share": 0.0,
+        "ari": 1.0,
+        "contingency": [
+          [
+            11,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ]
+        ]
+      },
+      "2018->2019": {
+        "changed_share": 0.0,
+        "ari": 1.0,
+        "contingency": [
+          [
+            11,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ]
+        ]
+      },
+      "2019->2020": {
+        "changed_share": 0.0,
+        "ari": 1.0,
+        "contingency": [
+          [
+            11,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ]
+        ]
+      },
+      "2020->2021": {
+        "changed_share": 0.0,
+        "ari": 1.0,
+        "contingency": [
+          [
+            11,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ]
+        ]
+      },
+      "2021->2022": {
+        "changed_share": 0.0,
+        "ari": 1.0,
+        "contingency": [
+          [
+            11,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ]
+        ]
+      },
+      "2022->2023": {
+        "changed_share": 0.19047619047619047,
+        "ari": 0.7638603696098563,
+        "contingency": [
+          [
+            11,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            1,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            3
+          ]
+        ]
+      }
+    },
+    "verification": {
+      "self_loops_total": 0,
+      "isolated_nodes_reported": true,
+      "betweenness_distance_attribute": true,
+      "migration_alignment": "Hungarian maximum-overlap alignment"
+    }
+  },
+  "fit_seconds": 0.143291999999974,
+  "history": {
+    "years": [
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  }
+}
