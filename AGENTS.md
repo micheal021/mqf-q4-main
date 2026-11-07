@@ -12,8 +12,8 @@ Use Python 3.13 and `uv`, with dependencies pinned in `pyproject.toml` and `uv.l
 export UV_CACHE_DIR="$PWD/.cache/uv"
 uv sync --locked --python 3.13
 uv run --locked python data/fetch.py --seed 42
-uv run --locked python code/approach1_q4.py --seed 42 --top-k 6
-uv run --locked python code/approach2_q4.py --seed 42 --top-k 6
+uv run --locked python code/approach1_q4.py --seed 42 --top-k 10
+uv run --locked python code/approach2_q4.py --seed 42 --top-k 10
 uv run --locked python code/compare.py
 ```
 

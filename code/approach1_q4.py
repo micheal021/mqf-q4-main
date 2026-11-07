@@ -56,7 +56,7 @@ def centrality(graph: nx.DiGraph, undirected: nx.Graph) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--seed", type=int, default=42)
-    parser.add_argument("--top-k", type=int, default=6)
+    parser.add_argument("--top-k", type=int, default=10)
     parser.add_argument("--resolution", type=float, default=1.0)
     parser.add_argument("--resolutions", default="0.5,1.0,1.5")
     parser.add_argument("--out", type=Path, default=ROOT / "results" / "approach1" / "q4")
